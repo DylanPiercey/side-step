@@ -1,0 +1,20 @@
+{
+  "name": "side-step",
+  "version": "0.1.0",
+  "description": "Append headers to ajax requests. Fetch or XHR.",
+  "author": "Dylan Piercey <pierceydylan@gmail.com>",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DylanPiercey/side-step"
+  },
+  "keywords": [
+    "fetch",
+    "xhr",
+    "xmlhttprequest",
+    "http",
+    "intercept",
+    "headers"
+  ]
+}
