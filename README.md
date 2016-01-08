@@ -14,13 +14,14 @@ npm install side-step
 var emitter = require('side-step');
 
 // An ajax request was fired somewhere.
-emitter.on("request", function (headers) {
-	// headers is an empty object, any additions will be sent as request headers.
-	headers["custom-key"] = "Hello World";
+emitter.on("request", ({ url, method, headers })=> {
+	// Headers has a set function to modifiy the request headers.
+	headers.set("custom-key", "Hello World");
 });
 
-emitter.on("response", function (headers) {
-	// headers is a read only object for the response headers with a get method.
+// An ajax request got a response.
+emitter.on("response", ({ url, method, headers })=> {
+	// Headers has a get function to retrieve the response headers.
 	headers.get("custom-key");
 });
 ```
